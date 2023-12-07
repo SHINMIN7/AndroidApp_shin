@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+    <!-- 이미지 등록 권한 허가하기 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
 
     <application
         android:allowBackup="true"
@@ -13,10 +17,10 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".PlaceSpinnerActivity"
+            android:name=".MealDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity2"
+            android:name=".PlaceSpinnerActivity"
             android:exported="false" />
         <activity
             android:name=".BaseActivity"

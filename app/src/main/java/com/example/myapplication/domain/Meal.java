@@ -1,5 +1,6 @@
 package com.example.myapplication.domain;
 
+import android.net.Uri;
 
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -11,12 +12,15 @@ import java.util.Random;
 
 @Entity(tableName = "meal")
 public class Meal {
+
     private static Random random = new Random();
 
     @PrimaryKey(autoGenerate = true)
     private int id;
 
     private String foods;
+
+    private String picture;
 
     private String place;
 
@@ -27,8 +31,8 @@ public class Meal {
     private int price;
     private String review;
 
-
     public Meal(String foods,
+                String picture,
                 String place,
                 MealType foodType,
                 LocalDateTime time,
@@ -36,22 +40,25 @@ public class Meal {
                 String review) {
         this.id = id;
         this.foods = foods;
+        this.picture = picture;
         this.place = place;
         this.foodType = foodType;
         this.time = time;
         this.price = price;
         this.review = review;
 
-        this.calorie = 100 * (random.nextInt(9 + 1) + 1);
+        this.calorie =  100*( random.nextInt(9 + 1) + 1);
     }
 
     public Meal(String foods,
+                Uri pictureUri,
                 String place,
                 String foodType,
                 String time,
                 int price,
                 String review) {
         this.foods = foods;
+        this.picture = pictureUri.toString();
         this.place = place;
         this.foodType = MealType.valueOf(foodType);
         LocalTime localTime = LocalTime.of(Integer.parseInt(time.substring(0, 2)),
@@ -60,10 +67,9 @@ public class Meal {
         this.price = price;
         this.review = review;
 
-        this.calorie = 100 * (random.nextInt(9 + 1) + 1);
+        this.calorie =  100*(random.nextInt(9 + 1) + 1);
     }
 
-    //getter setter
     public void setId(int id) {
         this.id = id;
     }
@@ -136,5 +142,15 @@ public class Meal {
         this.foodType = foodType;
     }
 
+    public String getPicture() {
+        return picture;
+    }
 
+    public Uri getPictureUri() {
+        return Uri.parse(picture);
+    }
+
+    public void setPicture(String picture) {
+        this.picture = picture;
+    }
 }

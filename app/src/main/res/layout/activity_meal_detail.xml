@@ -5,60 +5,80 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AnalysisFood">
+    tools:context=".MealDetailActivity">
+
+
 
     <TextView
-        android:id = "@+id/month_calorie"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:text="TextView"
-        android:textStyle="bold"
-        android:textSize="30dp"
-        />
-
-    <TextView
-        android:id = "@+id/month_food_type_cost_message"
+        android:id = "@+id/meal_names_view"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:text="한달 간 식사 종류별 비용"
+        android:text="TextView"
         android:textStyle="bold"
-        android:textSize="30dp"
+        android:textSize="20dp"
+        />
+
+
+    <ImageView
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_height="80dp" />
+
+
+    <TextView
+        android:id = "@+id/calorie"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:textSize="20dp"
         />
 
     <TextView
-        android:id = "@+id/breakfast_cost"
+        android:id = "@+id/place_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:text="TextView"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="20dp"
         />
 
     <TextView
-        android:id = "@+id/lunch_cost"
+        android:id = "@+id/food_type_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:text="TextView"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="20dp"
         />
 
     <TextView
-        android:id = "@+id/dinner_cost"
+        android:id = "@+id/time_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:text="TextView"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="20dp"
+        />
+
+
+    <TextView
+        android:id = "@+id/cost_view"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:text="TextView"
+        android:textStyle="bold"
+        android:textSize="20dp"
         />
 
     <TextView
-        android:id = "@+id/beverage_cost"
+        android:id = "@+id/review_view"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="60dp"
         android:text="TextView"
         android:textStyle="bold"
-        android:textSize="25dp"
+        android:textSize="20dp"
         />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

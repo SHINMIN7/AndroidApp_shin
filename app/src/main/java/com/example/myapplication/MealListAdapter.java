@@ -32,10 +32,10 @@ public class MealListAdapter extends ListAdapter<Meal, MealViewHolder> {
             @Override
             public void onClick(View v) {
 //
-//                Context context = v.getContext();
-//                Intent intent = new Intent(context, MealDetailActivity.class);
-//                intent.putExtra("meal", current.getFoods());
-//                context.startActivity(intent);
+                Context context = v.getContext();
+                Intent intent = new Intent(context, MealDetailActivity.class);
+                intent.putExtra("meal", current.getFoods());
+                context.startActivity(intent);
 
             }
         });
