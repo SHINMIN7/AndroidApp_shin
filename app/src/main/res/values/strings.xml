@@ -4,6 +4,7 @@
     <string name="button2">식사 보여주기</string>
     <string name="button3">식사 분석하기</string>
     <string name="add_meal">식사 등록하기</string>
+    <string name="TextView1">식단 관리 앱</string>
 
 
     <string-array name="place_array">
@@ -22,6 +23,7 @@
         <item>석식</item>
         <item>음료</item>
     </string-array>
+
 
 
 </resources>

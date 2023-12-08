@@ -97,11 +97,19 @@ public class InputFood extends BaseActivity {
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 String mealName = mealNameText.getText().toString();
                 String place = placeSpinner.getSelectedItem().toString();
                 String foodType = foodTypeSpinner.getSelectedItem().toString();
 
                 String time = timeText.getText().toString();
+                if (!isOnlyDigit(time) ) {
+                    Toast.makeText(getApplicationContext(), "시간을 문자 없이 입력해주세요",
+                            Toast.LENGTH_SHORT).show();
+                    return;
+                }
+
+
                 int cost = Integer.valueOf(costText.getText().toString());
                 String review = reviewText.getText().toString();
 
@@ -109,10 +117,26 @@ public class InputFood extends BaseActivity {
                 //ORM(room)을 사용해서 객체를 db에 저장
                 mealRepository.insert(new Meal(mealName,foodPicture, place, foodType, time, cost, review));
 
+
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
             }
         });
 
     }
+
+    private boolean isOnlyDigit(String time) {
+        boolean isDigit = true;
+        for (char c: time.toCharArray()) {
+            if (!Character.isDigit(c)) {
+                isDigit = false;
+            }
+        }
+        return isDigit;
+    }
+
+
 
     private void generateSpinner2() {
         Spinner spinner2 = (Spinner) findViewById(R.id.food_type_spinner);
