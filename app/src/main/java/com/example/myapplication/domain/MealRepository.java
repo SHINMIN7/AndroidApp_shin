@@ -31,4 +31,8 @@ public class MealRepository {
     public List<Meal> findLastOneMonth() {
         return mealDao.findLastOneMonth();
     }
+
+    public void deleteAll() {
+        mealDao.deleteAll();
+    }
 }

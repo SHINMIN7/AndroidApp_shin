@@ -24,4 +24,8 @@ public interface MealDao {
 
     @Query("SELECT * FROM meal WHERE time >= datetime('now', '-1 month')")
     List<Meal> findLastOneMonth();
+
+
+
+
 }

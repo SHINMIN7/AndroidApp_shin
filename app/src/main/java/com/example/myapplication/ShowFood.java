@@ -4,7 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.example.myapplication.domain.Meal;
 import com.example.myapplication.domain.MealRepository;
@@ -30,6 +33,22 @@ public class ShowFood extends BaseActivity {
         adapter.submitList(allMeals);
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+
+        //각 버튼을 눌렀을 때 화면 전환
+        Button deleteFoodButton = (Button) findViewById(R.id.deleteFoodButton);
+        deleteFoodButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mealRepository.deleteAll();
+                Intent intent = new Intent(getApplicationContext(), InputFood.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
 
 }

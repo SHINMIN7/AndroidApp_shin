@@ -23,7 +23,7 @@
         <item>석식</item>
         <item>음료</item>
     </string-array>
-
+    <string name="button4">식사 삭제하기</string>
 
 
 </resources>
