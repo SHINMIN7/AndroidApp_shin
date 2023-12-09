@@ -4,30 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background1"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="57dp"
-        android:layout_marginTop="113dp"
-        android:layout_marginEnd="57dp"
-        android:layout_marginBottom="380dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="332dp"
         android:text="@string/TextView1"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/showFoodButton"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <Button
         android:id="@+id/inputFoodButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="36dp"
-        android:layout_marginEnd="25dp"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="26dp"
         android:text="@string/button1"
         app:layout_constraintBaseline_toBaselineOf="@+id/showFoodButton"
         app:layout_constraintEnd_toStartOf="@+id/showFoodButton"
@@ -35,10 +36,10 @@
 
     <Button
         android:id="@+id/showFoodButton"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="35dp"
+        android:layout_width="150dp"
+        android:layout_height="65dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="60dp"
         android:text="@string/button2"
         app:layout_constraintBottom_toTopOf="@+id/analysisFoodButton"
         app:layout_constraintEnd_toEndOf="parent"
@@ -47,25 +48,43 @@
 
     <Button
         android:id="@+id/analysisFoodButton"
-        android:layout_width="150dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginBottom="15dp"
+        android:layout_width="160dp"
+        android:layout_height="65dp"
+        android:layout_marginBottom="47dp"
         android:text="@string/button3"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/showFoodButton" />
 
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="599dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="172dp"
+        android:gravity="clip_horizontal|center|left"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </LinearLayout>
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="435dp"
-        android:layout_height="430dp"
-        android:layout_marginStart="16dp"
-
-        android:layout_marginBottom="168dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="37dp"
+        android:scaleType="fitXY"
         android:src="@drawable/dongguk"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@drawable/dongguk" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

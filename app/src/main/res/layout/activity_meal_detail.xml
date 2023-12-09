@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background2"
     tools:context=".MealDetailActivity">
 
 
@@ -23,7 +24,8 @@
         android:id="@+id/image_view"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:adjustViewBounds="true" />
+        android:adjustViewBounds="true"
+        />
 
 
     <TextView
